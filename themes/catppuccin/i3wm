@@ -1,0 +1,51 @@
+#define Q(x) #x
+#define QUOTE(x) Q(x)
+#define glyph_font QUOTE(monospace_font)
+#define glyph glyph_workspace
+
+i3-wm.client.focused.color.border: color_accent
+i3-wm.client.focused.color.background: color_surface0
+i3-wm.client.focused.color.text: color_text
+i3-wm.client.focused.color.indicator: color_green
+i3-wm.client.focused.color.child_border: color_accent
+
+i3-wm.client.inactive.color.border: color_surface0
+i3-wm.client.inactive.color.background: color_surface0
+i3-wm.client.inactive.color.text: color_text
+i3-wm.client.inactive.color.indicator: color_surface0
+i3-wm.client.inactive.color.child_border: color_surface0
+
+i3-wm.client.unfocused.color.border: color_surface0
+i3-wm.client.unfocused.color.background: color_mantle
+i3-wm.client.unfocused.color.text: color_text
+i3-wm.client.unfocused.color.indicator: color_surface0
+i3-wm.client.unfocused.color.child_border: color_surface0
+
+i3-wm.client.urgent.color.border: color_red
+i3-wm.client.urgent.color.background: color_red
+i3-wm.client.urgent.color.text: color_text
+i3-wm.client.urgent.color.indicator: color_red
+i3-wm.client.urgent.color.child_border: color_red
+
+#define WORKSPACE_NAME(INDEX, FONT, COLOR, GLYPH) INDEX:<span> </span><span font_desc=FONT>INDEX </span><span foreground=COLOR>GLYPH</span><span> </span>
+
+i3-wm.workspace.1.name: WORKSPACE_NAME(1, glyph_font, QUOTE(color_blue), glyph)
+i3-wm.workspace.2.name: WORKSPACE_NAME(2, glyph_font, QUOTE(color_green), glyph)
+i3-wm.workspace.3.name: WORKSPACE_NAME(3, glyph_font, QUOTE(color_yellow), glyph)
+i3-wm.workspace.4.name: WORKSPACE_NAME(4, glyph_font, QUOTE(color_red), glyph)
+i3-wm.workspace.5.name: WORKSPACE_NAME(5, glyph_font, QUOTE(color_sky), glyph)
+i3-wm.workspace.6.name: WORKSPACE_NAME(6, glyph_font, QUOTE(color_teal), glyph)
+i3-wm.workspace.7.name: WORKSPACE_NAME(7, glyph_font, QUOTE(color_peach), glyph)
+i3-wm.workspace.8.name: WORKSPACE_NAME(8, glyph_font, QUOTE(color_mauve), glyph)
+i3-wm.workspace.9.name: WORKSPACE_NAME(9, glyph_font, QUOTE(color_sapphire), glyph)
+i3-wm.workspace.10.name: WORKSPACE_NAME(10, glyph_font, QUOTE(color_green), glyph)
+i3-wm.workspace.11.name: WORKSPACE_NAME(11, glyph_font, QUOTE(color_yellow), glyph)
+i3-wm.workspace.12.name: WORKSPACE_NAME(12, glyph_font, QUOTE(color_maroon), glyph)
+i3-wm.workspace.13.name: WORKSPACE_NAME(13, glyph_font, QUOTE(color_sky), glyph)
+i3-wm.workspace.14.name: WORKSPACE_NAME(14, glyph_font, QUOTE(color_teal), glyph)
+i3-wm.workspace.15.name: WORKSPACE_NAME(15, glyph_font, QUOTE(color_peach), glyph)
+i3-wm.workspace.16.name: WORKSPACE_NAME(16, glyph_font, QUOTE(color_lavender), glyph)
+i3-wm.workspace.17.name: WORKSPACE_NAME(17, glyph_font, QUOTE(color_blue), glyph)
+i3-wm.workspace.18.name: WORKSPACE_NAME(18, glyph_font, QUOTE(color_green), glyph)
+i3-wm.workspace.19.name: WORKSPACE_NAME(19, glyph_font, QUOTE(color_yellow), glyph)
+i3-wm.workspace.20.name: WORKSPACE_NAME(20, glyph_font, QUOTE(color_red), glyph)

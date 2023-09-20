@@ -1,0 +1,30 @@
+###############################################################################
+# Session Management
+###############################################################################
+
+## Session // Exit App // <><Shift> q ##
+bindsym $mod+Shift+q [con_id="__focused__"] kill
+
+## Session // Terminate App // <><Alt> q ##
+bindsym $mod+$alt+q [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
+
+## Session // Reload i3 Config // <><Shift> c ##
+bindsym $mod+Shift+c reload
+
+## Session // Restart i3 // <><Shift> r ##
+bindsym $mod+Shift+r restart
+
+## Session // System Mode // <Alt>+l ##
+set $mode_system [l]ogout [r]eboot [p]ower-down loc[k]-screen [s]leep
+mode "$mode_system" {
+    bindsym l exec /usr/bin/gnome-session-quit --logout
+    bindsym r exec /usr/bin/gnome-session-quit --reboot
+    bindsym p exec /usr/bin/gnome-session-quit --power-off
+    bindsym k exec dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
+    bindsym s exec systemctl suspend
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $alt+l mode "default"
+}
+bindsym $alt+l mode "$mode_system"

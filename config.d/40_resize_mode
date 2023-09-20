@@ -1,0 +1,34 @@
+## Resize // Enter Resize Mode // <> r ##
+set $resize_small 4
+set $resize_large 16
+mode "Resize Mode" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        ## Resize // Resize Window // ↑ ↓ ← → ##
+        bindsym Left resize shrink width $resize_small px or $resize_small ppt
+        bindsym Down resize grow height $resize_small px or $resize_small ppt
+        bindsym Up resize shrink height $resize_small px or $resize_small ppt
+        bindsym Right resize grow width $resize_small px or $resize_small ppt
+
+        bindsym Shift+Left resize shrink width $resize_large px or $resize_large ppt
+        bindsym Shift+Down resize grow height $resize_large px or $resize_large ppt
+        bindsym Shift+Up resize shrink height $resize_large px or $resize_large ppt
+        bindsym Shift+Right resize grow width $resize_large px or $resize_large ppt
+
+        ## Resize // Resize Window // k j h l ##
+        bindsym h resize shrink width $resize_small px or $resize_small ppt
+        bindsym k resize grow height $resize_small px or $resize_small ppt
+        bindsym j resize shrink height $resize_small px or $resize_small ppt
+        bindsym l resize grow width $resize_small px or $resize_small ppt
+
+        bindsym Shift+h resize shrink width $resize_large px or $resize_large ppt
+        bindsym Shift+k resize grow height $resize_large px or $resize_large ppt
+        bindsym Shift+j resize shrink height $resize_large px or $resize_large ppt
+        bindsym Shift+l resize grow width $resize_large px or $resize_large ppt
+
+        ## Resize // Exit Resize Mode // Escape or Enter ##
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "Resize Mode"

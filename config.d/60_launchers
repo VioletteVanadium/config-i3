@@ -1,0 +1,48 @@
+###############################################################################
+# Launcher dialogs
+###############################################################################
+
+## Launch // Terminal // <> Enter ##
+bindsym $mod+Return exec --no-startup-id /usr/bin/x-terminal-emulator
+
+## Launch // Browser // <><Shift> Enter ##
+bindsym $mod+Shift+Return exec --no-startup-id gtk-launch $(xdg-settings get default-web-browser)
+
+## Launch // Notification Viewer // <> d ##
+bindsym $mod+d exec kill -s USR1 $(pidof deadd-notification-center)
+
+## Launch // Resize gaps // <><Shift> g ##
+bindsym $mod+Shift+g exec ~/.config/regolith2/scripts/gap_size_refresh.sh
+
+## Launch // File Browser // <><Shift> n ##
+bindsym $mod+Shift+n exec --no-startup-id /usr/bin/nautilus --new-window
+
+## Launch // Settings // <><Shift> s ##
+bindsym $mod+Shift+s exec --no-startup-id regolith-control-center
+
+## Launch // Display Settings // <><Shift> d ##
+bindsym $mod+Shift+d exec --no-startup-id regolith-control-center display
+
+## Launch // Wifi Settings // <><Shift> w ##
+bindsym $mod+Shift+w exec --no-startup-id regolith-control-center wifi
+
+## Launch // Bluetooth Settings // <><Shift> b ##
+bindsym $mod+Shift+b exec --no-startup-id regolith-control-center bluetooth
+
+## Launch // Application // <> Space ##
+bindsym $mod+space exec --no-startup-id ilia -p apps
+
+## Launch // Command // <><Shift> Space ##
+bindsym $mod+Shift+space exec --no-startup-id ilia -p terminal
+
+## Launch // Keybinding Viewer // <><Shift> ? ##
+bindsym $mod+Shift+question exec --no-startup-id ilia -p keybindings
+
+## Navigate // Window by Name // <><Ctrl> Space ##
+bindsym $mod+Ctrl+space exec --no-startup-id ilia -p windows
+
+## Launch // File Search // <><Alt> Space ##
+bindsym $mod+$alt+space exec --no-startup-id ilia -p tracker
+
+## Launch // Look Selector // <><Alt> l ##
+bindsym $mod+$alt+l exec --no-startup-id regolith-look-selector

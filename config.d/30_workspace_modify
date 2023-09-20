@@ -1,0 +1,114 @@
+###############################################################################
+# Window and Workspace Configuration
+###############################################################################
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# switch back to the previously focused workspace using the same ws number
+# eg: {on ws 2} -> mod+1 -> {on ws 1} -> mod+1 -> {back to ws 2}
+workspace_auto_back_and_forth yes
+
+## Modify // Vertical Window Orientation // <> v ##
+bindsym $mod+v split vertical
+
+## Modify // Horizontal Window Orientation // <> g ##
+bindsym $mod+g split horizontal
+
+## Modify // Staking Window Orientation // <> s ##
+bindsym $mod+s layout stacking
+
+## Modify // Tabbed Window Orientation // <> w ##
+bindsym $mod+w layout tabbed
+
+## Modify // Toggle Window Orientation // <> e ##
+bindsym $mod+e split toggle
+
+## Modify // Window Layout Mode // <><Shift> e ##
+bindsym $mod+Shift+e layout toggle tabbed splith splitv stacked
+
+## Modify // Window Fullscreen Toggle // <> f ##
+bindsym $mod+f fullscreen toggle
+
+## Modify // Window Floating Toggle // <><Shift> f ##
+bindsym $mod+Shift+f floating toggle
+
+## Modify // Move to Scratchpad // <><Ctrl> m ##
+bindsym $mod+Shift+m move to scratchpad
+
+## Modify // Window Position // <><Shift> ↑ ↓ ← → ##
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+## Modify // Window Position // <><Shift> k j h l ##
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+## Modify // Containing Workspace // <><Ctrl><Shift> ↑ ↓ ← → ##
+bindsym $mod+Ctrl+Shift+Left move workspace to output left
+bindsym $mod+Ctrl+Shift+Right move workspace to output right
+bindsym $mod+Ctrl+Shift+Up move workspace to output up
+bindsym $mod+Ctrl+Shift+Down move workspace to output down
+
+## Modify // Containing Workspace // <><Ctrl><Shift> k j h l ##
+bindsym $mod+Ctrl+Shift+h move workspace to output left
+bindsym $mod+Ctrl+Shift+j move workspace to output down
+bindsym $mod+Ctrl+Shift+k move workspace to output up
+bindsym $mod+Ctrl+Shift+l move workspace to output right
+
+## Modify // Move Window to Workspace 1 - 10 // <><Shift> 1..0 ##
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+## Modify // Move Window to Workspace 11 - 19// <><Alt><Shift> 1..0 ##
+bindsym $mod+Shift+$alt+1 move container to workspace number $ws11
+bindsym $mod+Shift+$alt+2 move container to workspace number $ws12
+bindsym $mod+Shift+$alt+3 move container to workspace number $ws13
+bindsym $mod+Shift+$alt+4 move container to workspace number $ws14
+bindsym $mod+Shift+$alt+5 move container to workspace number $ws15
+bindsym $mod+Shift+$alt+6 move container to workspace number $ws16
+bindsym $mod+Shift+$alt+7 move container to workspace number $ws17
+bindsym $mod+Shift+$alt+8 move container to workspace number $ws18
+bindsym $mod+Shift+$alt+9 move container to workspace number $ws19
+bindsym $mod+Shift+$alt+0 move container to workspace number $ws20
+
+## Modify // Move Window to Next Free Workspace // <><Shift> ` ##
+bindsym $mod+Shift+grave exec --no-startup-id /usr/bin/i3-next-workspace --move-window
+
+# move focused container to workspace, move to workspace
+## Modify // Carry Window to Workspace 1 - 10// <><Alt> 1..0 ##
+bindsym $mod+Ctrl+1 move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Ctrl+2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Ctrl+3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Ctrl+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Ctrl+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Ctrl+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Ctrl+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Ctrl+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Ctrl+9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+Ctrl+0 move container to workspace number $ws10; workspace number $ws10
+## Modify // Carry Window to Workspace 11 - 19 // <><Alt><Ctrl> 1..0 ##
+bindsym $mod+Ctrl+$alt+1 move container to workspace number $ws11; workspace number $ws11
+bindsym $mod+Ctrl+$alt+2 move container to workspace number $ws12; workspace number $ws12
+bindsym $mod+Ctrl+$alt+3 move container to workspace number $ws13; workspace number $ws13
+bindsym $mod+Ctrl+$alt+4 move container to workspace number $ws14; workspace number $ws14
+bindsym $mod+Ctrl+$alt+5 move container to workspace number $ws15; workspace number $ws15
+bindsym $mod+Ctrl+$alt+6 move container to workspace number $ws16; workspace number $ws16
+bindsym $mod+Ctrl+$alt+7 move container to workspace number $ws17; workspace number $ws17
+bindsym $mod+Ctrl+$alt+8 move container to workspace number $ws18; workspace number $ws18
+bindsym $mod+Ctrl+$alt+9 move container to workspace number $ws19; workspace number $ws19
+bindsym $mod+Ctrl+$alt+0 move container to workspace number $ws20; workspace number $ws20
+
+## Modify // Carry Window to Next Free Workspace // <><Alt> ` ##
+bindsym $mod+Ctrl+grave exec --no-startup-id /usr/bin/i3-next-workspace --move-window-and-follow
