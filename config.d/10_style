@@ -1,4 +1,4 @@
-set_from_resource $font monospace_font_small
+set_from_resource $font monospace_font_small "FiraCode Nerd Font Mono 8"
 font pango:$font
 
 set $mod Mod4
@@ -60,29 +60,29 @@ set_from_resource $ws19 i3-wm.workspace.19.name "19"
 set_from_resource $ws20 i3-wm.workspace.20.name "20"
 
 # colors
-set_from_resource $focused.border         i3-wm.client.focused.color.border
-set_from_resource $focused.background     i3-wm.client.focused.color.background
-set_from_resource $focused.text           i3-wm.client.focused.color.text
-set_from_resource $focused.indicator      i3-wm.client.focused.color.indicator
-set_from_resource $focused.child_border   i3-wm.client.focused.color.child_border
+set_from_resource $focused.border         i3-wm.client.focused.color.border         #00FF00
+set_from_resource $focused.background     i3-wm.client.focused.color.background     #000000
+set_from_resource $focused.text           i3-wm.client.focused.color.text           #FFFFFF
+set_from_resource $focused.indicator      i3-wm.client.focused.color.indicator      #0000FF
+set_from_resource $focused.child_border   i3-wm.client.focused.color.child_border   #00FF00
 
-set_from_resource $inactive.border        i3-wm.client.inactive.color.border
-set_from_resource $inactive.background    i3-wm.client.inactive.color.background
-set_from_resource $inactive.text          i3-wm.client.inactive.color.text
-set_from_resource $inactive.indicator     i3-wm.client.inactive.color.indicator
-set_from_resource $inactive.child_border  i3-wm.client.inactive.color.child_border
+set_from_resource $inactive.border        i3-wm.client.inactive.color.border        #000000
+set_from_resource $inactive.background    i3-wm.client.inactive.color.background    #000000
+set_from_resource $inactive.text          i3-wm.client.inactive.color.text          #FFFFFF
+set_from_resource $inactive.indicator     i3-wm.client.inactive.color.indicator     #000000
+set_from_resource $inactive.child_border  i3-wm.client.inactive.color.child_border  #000000
 
-set_from_resource $unfocused.border       i3-wm.client.unfocused.color.border
-set_from_resource $unfocused.background   i3-wm.client.unfocused.color.background
-set_from_resource $unfocused.text         i3-wm.client.unfocused.color.text
-set_from_resource $unfocused.indicator    i3-wm.client.unfocused.color.indicator
-set_from_resource $unfocused.child_border i3-wm.client.unfocused.color.child_border
+set_from_resource $unfocused.border       i3-wm.client.unfocused.color.border       #000000
+set_from_resource $unfocused.background   i3-wm.client.unfocused.color.background   #888888
+set_from_resource $unfocused.text         i3-wm.client.unfocused.color.text         #FFFFFF
+set_from_resource $unfocused.indicator    i3-wm.client.unfocused.color.indicator    #000000
+set_from_resource $unfocused.child_border i3-wm.client.unfocused.color.child_border #000000
 
-set_from_resource $urgent.border          i3-wm.client.urgent.color.border
-set_from_resource $urgent.background      i3-wm.client.urgent.color.background
-set_from_resource $urgent.text            i3-wm.client.urgent.color.text
-set_from_resource $urgent.indicator       i3-wm.client.urgent.color.indicator
-set_from_resource $urgent.child_border    i3-wm.client.urgent.color.child_border
+set_from_resource $urgent.border          i3-wm.client.urgent.color.border          #FF0000
+set_from_resource $urgent.background      i3-wm.client.urgent.color.background      #FF0000
+set_from_resource $urgent.text            i3-wm.client.urgent.color.text            #FFFFFF
+set_from_resource $urgent.indicator       i3-wm.client.urgent.color.indicator       #FF0000
+set_from_resource $urgent.child_border    i3-wm.client.urgent.color.child_border    #FF0000
 
 
 # Window Border color
