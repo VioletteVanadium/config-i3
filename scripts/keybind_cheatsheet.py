@@ -17,7 +17,8 @@ ICONS = {
     re.compile(r"ctrl", flags=re.I): "C",
     re.compile(r"shift", flags=re.I): "󰘶",
     re.compile(r"space", flags=re.I): "󱁐",
-    re.compile(r"ret(?:urn)?", flags=re.I): "󰌑",
+    re.compile(r"tab", flags=re.I): "󰌒",
+    re.compile(r"(ret(?:urn)?|enter)", flags=re.I): "󰌑",
     re.compile(r"esc(?:ape)?", flags=re.I): "󱊷",
     re.compile(r"question", flags=re.I): "?",
     re.compile(r"grave", flags=re.I): "`",
@@ -27,10 +28,8 @@ CONFIG = os.path.join(os.getenv("HOME"), ".config", "regolith3", "config-i3", "c
 CACHE = os.path.join(os.getenv("HOME"), ".cache", "i3-cheat-sheet.json")
 
 
-def iconify(keys, wrap=None):
+def iconify(keys):
     for pattern, replacement in ICONS.items():
-        if wrap is not None:
-            replacement = wrap[0] + replacement + wrap[1]
         keys = pattern.sub(replacement, keys)
     return keys
 
@@ -47,7 +46,7 @@ def generate(force=False):
         "keys": 0,
         "label": 0,
     }
-    for conf in os.listdir(CONFIG):
+    for conf in sorted(os.listdir(CONFIG)):
         with open(os.path.join(CONFIG, conf)) as f:
             for line in f:
                 line = line.strip()
