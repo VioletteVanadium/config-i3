@@ -23,8 +23,7 @@ ICONS = {
     re.compile(r"question", flags=re.I): "?",
     re.compile(r"grave", flags=re.I): "`",
 }
-# CONFIG = os.path.join(os.getenv("HOME"), ".config", "i3", "config.d")
-CONFIG = os.path.join(os.getenv("HOME"), ".config", "regolith3", "config-i3", "config.d")
+CONFIG = os.path.join(os.getenv("HOME"), ".config", "i3", "config.d")
 CACHE = os.path.join(os.getenv("HOME"), ".cache", "i3-cheat-sheet.json")
 
 

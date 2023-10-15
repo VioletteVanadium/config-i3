@@ -1,1 +1,62 @@
+set_from_resource $font monospace_font_small "FiraCode Nerd Font Mono 8"
+font pango:$font
+
+set $mod Mod4
+set $alt Mod1
+
+# gaps
+gaps inner 12
+gaps outer 24
+gaps horizontal 48
+smart_gaps inverse_outer
+
+# Provide window class to float above tiled windows
+floating_maximum_size -1 x -1
+for_window [class="floating_window"] floating enable
+
+set $border_size 3
+
+# Set border size
+default_floating_border pixel $border_size
+default_border pixel $border_size
+
+# Work-around for bug in 4.21, remove when fixed
+# See https://github.com/i3/i3/issues/5149
+for_window [all] border pixel $border_size
+
+# Enable popup during fullscreen
+popup_during_fullscreen smart
+
+# window focus follows your mouse movements as the mouse crosses window borders
+focus_follows_mouse no
+
+# Hiding borders adjacent to the screen edges.
+# The "smart" setting hides borders on workspaces with only one window visible.
+hide_edge_borders smart
+
+# Hide mouse pointer if unused
+exec --no-startup-id /usr/bin/unclutter -b
+
+# workspace names
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
+set $ws10 "10"
+set $ws11 "11"
+set $ws12 "12"
+set $ws13 "13"
+set $ws14 "14"
+set $ws15 "15"
+set $ws16 "16"
+set $ws17 "17"
+set $ws18 "18"
+set $ws19 "19"
+set $ws20 "20"
+
 include ~/.config/i3/config.d/*.conf
